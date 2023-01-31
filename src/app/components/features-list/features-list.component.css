@@ -36,7 +36,7 @@ li {
   background: var(--primary);
 
   animation-name: lineAnimation;
-  animation-duration: 6s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -48,7 +48,7 @@ li {
   background: #3386bd;
 
   animation-name: lineAnimation;
-  animation-duration: 12s;
+  animation-duration: 14s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 4s;
@@ -59,7 +59,7 @@ li {
     width: 0%;
     opacity: 10%;
   }
-  70% {
+  80% {
     width: 100%;
     opacity: 80%;
   }
