@@ -1,0 +1,77 @@
+.b1 {
+  /* background-image: url("../../../assets/10.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;*/
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: square;
+}
+
+li {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.padding-sides {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.b1__b2 {
+  padding-bottom: 200px;
+}
+
+#light {
+  position: relative;
+  margin-bottom: 50px;
+}
+#lineh1 {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  background: var(--primary);
+
+  animation-name: lineAnimation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#lineh2 {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 2px;
+  background: #3386bd;
+
+  animation-name: lineAnimation;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 4s;
+}
+
+@keyframes lineAnimation {
+  0% {
+    width: 0%;
+    opacity: 10%;
+  }
+  70% {
+    width: 100%;
+    opacity: 80%;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 0%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  ul {
+    width: 75%;
+  }
+}

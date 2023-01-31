@@ -1,0 +1,41 @@
+<div class="container">
+  <div style="font-size: 20px">Trusted by the greatest teams</div>
+  <div class="client-list-outer-container">
+    <div class="row-center">
+      <button mat-icon-button (click)="initiateTranslation(true)">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+    </div>
+    <div class="client-list">
+      
+      <div
+        *ngFor="let current of currentImageIndex; let i = index"
+        class="client-item"
+        [style.width.px]="clientWidth"
+        [style.height.px]="clientHeight"
+      >
+        <img
+          [@translation]="
+            currentAnimationStateIndex == 0
+              ? 'void'
+              : currentAnimationStateIndex == 1
+              ? 'translateRight'
+              : 'translateLeft'
+          "
+          (@translation.done)="onTranslationComplete($event)"
+          [style]="{
+            'object-fit': 'contain',
+            visibility: isVisible(i) ? 'visible' : 'hidden'
+          }"
+          [src]="clients[current].imgSrc"
+          [alt]="clients[current].name"
+        />
+      </div>
+    </div>
+    <div class="row-center">
+      <button mat-icon-button (click)="initiateTranslation(false)">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="b1">
+  <div class="b1__b1 title row-center">Adversarium nec?</div>
+
+  <div class="b1__b2">
+    <div *ngFor="let item of items" class="b1__b2__b1">
+      <div class="b1__b2__b1__b1 column-center">
+        <div class="b1__b2__b1__b1__b1 column-center">
+          <mat-icon>{{ item.iconName }}</mat-icon>
+        </div>
+      </div>
+      <div class="b1__b2__b1__b2 column-center-vertical">
+        <div class="b1__b2__b1__b2__b1">{{ item.title }}</div>
+        <div>{{ item.content }}</div>
+      </div>
+    </div>
+  </div>
+</div>

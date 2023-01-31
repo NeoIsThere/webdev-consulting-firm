@@ -1,0 +1,8 @@
+.b1 {
+  border-top: 2px solid var(--belize-hole);
+
+  padding: 75px 10% 150px 10%;
+  background-color: var(--primary);
+  color: white;
+}
+

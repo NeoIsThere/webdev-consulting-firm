@@ -1,0 +1,66 @@
+<div class="b1">
+  <div class="b1__b1" *ngFor="let imageSrc of imagesSrc; let i = index">
+    <div class="b1__b1__b1" [ngStyle]="getDisplay(i)">
+      <div class="overlay">
+        <div class="overlay__side__left">
+          <!-- <mat-icon
+            class="arrow-left"
+            *ngIf="isSliderActive"
+            (click)="onChangeImage(false)"
+            >play_circle</mat-icon
+          >-->
+        </div>
+
+        <div class="overlay__center column-center">
+          <div></div>
+
+          <div>
+            <div class="overlay__center__dark column">
+              <div class="overlay__center__line__1">
+                <div>PARIS CONSULTING GROUP</div>
+              </div>
+              <div class="overlay__center__line__2">BUSINESS CONSULTANTS</div>
+
+              <div class="overlay__center__line__3">
+                <div class="overlay__center__line__3__1 row-center">
+                  <button mat-button>Learn More</button>
+                </div>
+                <div class="overlay__center__line__3__2 row-center">
+                  <button mat-button>  <mat-icon>phone_in_talk</mat-icon> Talk to an Expert</button>
+                
+                </div>
+              </div>
+            </div>
+            <div class="overlay__center__arrows row-center-horizontal">
+              <div class="overlay__center__arrows__1">
+                <!-- <mat-icon
+                  class="arrow-left"
+                  *ngIf="isSliderActive"
+                  (click)="onChangeImage(false)"
+                  >play_circle</mat-icon
+                >
+
+                <mat-icon *ngIf="isSliderActive" (click)="onChangeImage(true)"
+                  >play_circle</mat-icon
+                >-->
+              </div>
+            </div>
+          </div>
+
+          <div class="overlay__center__down column">
+            <div class="scroll-arrows-animated">
+              <app-arrows-anim></app-arrows-anim>
+            </div>
+          </div>
+        </div>
+
+        <div class="overlay__side__right">
+          <!--  <mat-icon *ngIf="isSliderActive" (click)="onChangeImage(true)"
+            >play_circle</mat-icon
+          > -->
+        </div>
+      </div>
+      <img [src]="imageSrc" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.b1 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.b1__b2{
+}

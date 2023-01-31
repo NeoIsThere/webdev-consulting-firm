@@ -1,0 +1,49 @@
+<div class="b1 row-center">
+  <div class="b1__b1"  routerLink="/home">
+    <img [src]='logoPath' />
+  </div>
+
+  <div class="b1__b2">
+    <div class="b1__b2__b1" >
+      <nav
+        mat-tab-nav-bar
+        animationDuration="0ms"
+        mat-align-tabs="end"
+        color="primary"
+      >
+        <a
+          *ngFor="let navItem of navItems"
+          mat-tab-link
+          [routerLink]="navItem.route"
+          [active]="isActive(navItem.route)"
+        >
+          {{ navItem.label }}
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="b1__b3">
+    <div class="b1__b3__b1 row-center">
+      <button mat-raised-button>
+        <mat-icon>calendar_month</mat-icon> Schedule a Call
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="b2">
+  <div class="b2__b1">
+    <div class="b2__b1__b1 row">
+      <button class="mobile-button" mat-raised-button>
+        <div class="mobile-button__content row-center">
+          <mat-icon class="mobile-button__icon">calendar_month</mat-icon>
+          Talk to an Expert
+        </div>
+      </button>
+    </div>
+  </div>
+  <div class="b2__b2" routerLink="/home">
+    <img  [src]='logoPath' />
+  </div>
+</div>
