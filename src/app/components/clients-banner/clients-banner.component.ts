@@ -42,16 +42,16 @@ import { mod } from 'src/app/utils';
 })
 export class ClientsBannerComponent implements OnInit {
   clients = [
-    { name: 'Client 1', imgSrc: '../../../assets/clients/campbells.png' },
-    { name: 'Client 3', imgSrc: '../../../assets/clients/discovery.png' },
-    { name: 'Client 4', imgSrc: '../../../assets/clients/microsoft.png' },
-    { name: 'Client 2', imgSrc: '../../../assets/clients/starbucks.png' },
-    { name: 'Client 3', imgSrc: '../../../assets/clients/uber.png' },
-        { name: 'Client 1', imgSrc: '../../../assets/clients/campbells.png' },
-    { name: 'Client 3', imgSrc: '../../../assets/clients/discovery.png' },
-    { name: 'Client 4', imgSrc: '../../../assets/clients/microsoft.png' },
-    { name: 'Client 2', imgSrc: '../../../assets/clients/starbucks.png' },
-    { name: 'Client 3', imgSrc: '../../../assets/clients/uber.png' },
+    { name: 'Client 1', imgSrc: 'assets/clients/campbells.png' },
+    { name: 'Client 3', imgSrc: 'assets/clients/discovery.png' },
+    { name: 'Client 4', imgSrc: 'assets/clients/microsoft.png' },
+    { name: 'Client 2', imgSrc: 'assets/clients/starbucks.png' },
+    { name: 'Client 3', imgSrc: 'assets/clients/uber.png' },
+        { name: 'Client 1', imgSrc: 'assets/clients/campbells.png' },
+    { name: 'Client 3', imgSrc: 'assets/clients/discovery.png' },
+    { name: 'Client 4', imgSrc: 'assets/clients/microsoft.png' },
+    { name: 'Client 2', imgSrc: 'assets/clients/starbucks.png' },
+    { name: 'Client 3', imgSrc: 'assets/clients/uber.png' },
     // more clients
   ];
 
