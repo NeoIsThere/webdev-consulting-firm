@@ -1,6 +1,6 @@
 ng build --output-path docs --base-href https://neoisthere.github.io/webdev-consulting-firm/
 cd ./docs
-copy index.html 404.html
+cp index.html 404.html
 cd ..
 git add .
 git commit -m"build"
