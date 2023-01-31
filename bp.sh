@@ -4,5 +4,5 @@ cp index.html 404.html
 cd ..
 git add .
 git commit -m"build"
-git push origin dev
+git push origin prod
 
