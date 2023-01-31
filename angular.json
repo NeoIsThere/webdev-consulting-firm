@@ -10,7 +10,7 @@
           "strict": true
         }
       },
-      "root": "webdev-consulting-firm",
+      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
