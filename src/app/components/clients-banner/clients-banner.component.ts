@@ -70,12 +70,7 @@ export class ClientsBannerComponent implements OnInit {
 
   ngOnInit(): void {
     const width = window.innerWidth - 200;
-    console.log(width);
     this.nLogoToShow = Math.min(Math.floor(width / 200), this.clients.length);
-    console.log(width, this.nLogoToShow);
-    //this.nLogoToShow = 5;
-
-    console.log(this.nLogoToShow);
 
     for (let i = 0; i < this.clients.length; i++) {
       this.currentImageIndex[i] = i;
@@ -98,7 +93,6 @@ export class ClientsBannerComponent implements OnInit {
     /*if(++this.counter == 2){
       this.currentAnimationStateIndex =2;
     }*/
-    console.log('initiate!');
   }
 
   navigate(isLeft: boolean) {
