@@ -1,9 +1,4 @@
 import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
   AnimationEvent,
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
