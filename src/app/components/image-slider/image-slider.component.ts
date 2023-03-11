@@ -9,7 +9,7 @@ export class ImageSliderComponent implements OnInit {
   constructor() {}
 
   imageIndex: number = 0;
-  imagesSrc: string[] = ['/assets/0.jpg', '/assets/1.jpg'];
+  imagesSrc: string[] = ['assets/0.jpg', 'assets/1.jpg'];
 
   ngOnInit(): void {}
 

@@ -7,13 +7,11 @@
   margin-bottom: 25px;
 }
 
-.client-list-outer-container{
+.client-list-outer-container {
   display: grid;
   grid-template-columns: 100px 1fr 100px;
   align-items: center;
 }
-
-
 
 .client-list {
   display: flex;
@@ -24,10 +22,9 @@
   margin: 50px 0;
   overflow-x: hidden;
   height: 100px;
-
 }
 
-.client-item{
+.client-item {
   /*transform: translate(-200px);*/
 }
 
@@ -36,8 +33,6 @@
 }
 
 img {
-  width: 200px;
-  height: 100%;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.75;
