@@ -7,7 +7,6 @@
       </button>
     </div>
     <div class="client-list">
-      
       <div
         *ngFor="let current of currentImageIndex; let i = index"
         class="client-item"
@@ -15,20 +14,23 @@
         [style.height.px]="clientHeight"
       >
         <img
-          [@translation]="
-            currentAnimationStateIndex == 0
-              ? 'void'
-              : currentAnimationStateIndex == 1
-              ? 'translateRight'
-              : 'translateLeft'
-          "
-          (@translation.done)="onTranslationComplete($event)"
+          [@logoTranslation]="{
+            value:
+              currentAnimationStateIndex == 0
+                ? 'void'
+                : currentAnimationStateIndex == 1
+                ? 'translateRight'
+                : 'translateLeft'
+          , params: {voidTranslationLength: voidTranslationLength, leftTranslationLength: leftTranslationLength}}"
+          (@logoTranslation.done)="onTranslationComplete($event)"
           [style]="{
             'object-fit': 'contain',
             visibility: isVisible(i) ? 'visible' : 'hidden'
           }"
           [src]="clients[current].imgSrc"
           [alt]="clients[current].name"
+          [style.width.px]="clientWidth"
+          [style.height.px]="clientHeight"
         />
       </div>
     </div>

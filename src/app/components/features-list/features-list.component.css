@@ -1,10 +1,11 @@
 .b1 {
-  /* background-image: url("../../../assets/10.png");
-  background-size: 100% auto;
+  background-image: url("/assets/1.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;*/
+  background-position: bottom;
   padding-top: 50px;
   overflow-x: hidden;
+  color: white;
 }
 
 ul {
@@ -33,7 +34,7 @@ li {
   position: absolute;
   left: 0;
   height: 2px;
-  background: var(--primary);
+  background: #64b0e3;
 
   animation-name: lineAnimation;
   animation-duration: 10s;
@@ -45,8 +46,7 @@ li {
   left: 0;
   top: 10px;
   height: 2px;
-  background: #3386bd;
-
+  background: #6996b4;
   animation-name: lineAnimation;
   animation-duration: 14s;
   animation-iteration-count: infinite;

@@ -8,78 +8,65 @@ import {
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { mod } from 'src/app/utils';
+import { logoTranslationAnimation } from 'src/app/animations';
 
 @Component({
   selector: 'app-clients-banner',
   templateUrl: './clients-banner.component.html',
   styleUrls: ['./clients-banner.component.css'],
-  animations: [
-    trigger('translation', [
-      state(
-        'void',
-        style({
-          transform: 'translate(-300px)',
-        })
-      ),
-      state(
-        'translateRight',
-        style({
-          transform: 'translate(0px)',
-        })
-      ),
-      state(
-        'translateLeft',
-        style({
-          transform: 'translate(-600px)',
-        })
-      ),
-      transition('void => translateRight', [animate('0.5s')]),
-      transition('void => translateLeft', [animate('0.5s')]),
-      transition('translateRight => void', [animate('0s')]),
-      transition('translateLeft => void', [animate('0s')]),
-    ]),
-  ],
+  animations: [logoTranslationAnimation],
 })
 export class ClientsBannerComponent implements OnInit {
   clients = [
     { name: 'Client 1', imgSrc: 'assets/clients/campbells.png' },
+    { name: 'Client 2', imgSrc: 'assets/clients/starbucks.png' },
     { name: 'Client 3', imgSrc: 'assets/clients/discovery.png' },
     { name: 'Client 4', imgSrc: 'assets/clients/microsoft.png' },
-    { name: 'Client 2', imgSrc: 'assets/clients/starbucks.png' },
-    { name: 'Client 3', imgSrc: 'assets/clients/uber.png' },
-        { name: 'Client 1', imgSrc: 'assets/clients/campbells.png' },
-    { name: 'Client 3', imgSrc: 'assets/clients/discovery.png' },
-    { name: 'Client 4', imgSrc: 'assets/clients/microsoft.png' },
-    { name: 'Client 2', imgSrc: 'assets/clients/starbucks.png' },
-    { name: 'Client 3', imgSrc: 'assets/clients/uber.png' },
+    { name: 'Client 4', imgSrc: 'assets/clients/uber.png' },
+    { name: 'Client 4', imgSrc: 'assets/clients/vh1.png' },
+    { name: 'Client 4', imgSrc: 'assets/clients/viacom.png' },
     // more clients
   ];
 
   currentIndex = 0;
   clientWidth = 200; // adjust this value to change the width of the client item
   clientHeight = 75; // adjust this value to change the width of the client item
-  clientVisible = 3; // adjust this value to change the number of visible clients
   clientCount = this.clients.length;
-  nLogoToShow = 0;
   currentImageIndex: number[] = [];
-
+  nClientsToShow: number = 0;
   currentAnimationStateIndex: number = 0;
   navigating: boolean = false;
-
+  arrowSectionWidth: number = 100;
   nFinished = 0;
 
   ngOnInit(): void {
-    const width = window.innerWidth - 200;
-    this.nLogoToShow = Math.min(Math.floor(width / 200), this.clients.length);
+    const nToShow = Math.floor(
+      (window.innerWidth - 2 * this.arrowSectionWidth) / this.clientWidth
+    );
+
+    this.clientWidth = Math.min(
+      window.innerWidth - 2 * this.arrowSectionWidth,
+      200
+    );
+    this.clientHeight = this.clientWidth / 2.667;
+
+    console.log(this.clientWidth);
 
     for (let i = 0; i < this.clients.length; i++) {
       this.currentImageIndex[i] = i;
     }
   }
 
+  get voidTranslationLength() {
+    return -this.arrowSectionWidth - this.clientWidth + 'px';
+  }
+
+  get leftTranslationLength() {
+    return -this.arrowSectionWidth - 2 * this.clientWidth + 'px';
+  }
+
   isVisible(index: number) {
     return true;
-    return index >= 0 && index <= this.nLogoToShow;
   }
 
   counter = 0;
